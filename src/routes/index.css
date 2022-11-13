@@ -1,0 +1,14 @@
+column {
+  @apply flex flex-col;
+}
+row {
+  @apply flex flex-row;
+}
+
+h4 {
+  @apply text-md text-blue-300;
+}
+
+* {
+  @apply font-smoothing;
+}
