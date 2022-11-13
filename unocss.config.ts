@@ -53,7 +53,6 @@ export default defineConfig({
 })
 
 const handleColors = (c: string, shade: string) => {
-  console.log(c, shade)
   if (c === "white") {
     return `bg-light-200 hover:bg-white text-dark-900 shadow
     dark:bg-dark-900 dark:hover:bg-black dark:text-light-600`
