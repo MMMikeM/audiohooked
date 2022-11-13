@@ -6,6 +6,7 @@ import { FileRoutes, Head, Meta, Scripts, Title } from "solid-start"
 import { I18nContext, createI18nContext } from "@solid-primitives/i18n"
 import "virtual:uno.css"
 import "@unocss/reset/tailwind.css"
+import "./routes/index.css"
 import dict from "./dict"
 
 export default function Root() {
@@ -20,7 +21,7 @@ export default function Root() {
           <Meta charset="utf-8" />
           <Meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
-        <body>
+        <body bg="light-900 dark:dark-200">
           <ErrorBoundary>
             <Suspense>
               <Routes>
