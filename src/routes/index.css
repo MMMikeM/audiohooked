@@ -6,7 +6,7 @@ row {
 }
 
 h4 {
-  @apply text-md text-blue-300;
+  @apply text-md text-light-900;
 }
 
 * {

@@ -23,10 +23,10 @@ export default function Counter() {
   }
 
   return (
-    <row center w="full" h="screen" overflow="hidden" bg="gray-900">
-      <column p="4" gap="4" items="center" w="1/2" bg="gray-200" rounded="lg">
+    <row center w="full" h="screen" overflow="hidden" bg="dark-900">
+      <column p="4" gap="4" items="center" w="1/2" bg="dark-200" rounded="lg">
         <button
-          btn="gray"
+          btn="dark"
           min-w="12"
           disabled={audio.state == AudioState.ERROR}
           onClick={() => setPlaying(!playing())}
@@ -34,10 +34,11 @@ export default function Counter() {
           <div
             h="12"
             w="12"
+            color="light-900"
             class={playing() ? "i-carbon-pause-outline" : "i-carbon-play-outline"}
           />
         </button>
-        <row center gap="4" class="w-full shadow-lg bg-white rounded-full p-2">
+        <row center gap="4" class="w-full shadow-lg bg-dark-500 rounded-full p-2">
           <input
             onInput={({ currentTarget: { value } }) => controls.seek(parseInt(value, 10))}
             type="range"
@@ -45,7 +46,7 @@ export default function Counter() {
             step="0.01"
             max={audio.duration}
             value={audio.currentTime}
-            bg="gray-200 hover:gray-300"
+            bg="dark-200 hover:dark-300"
             class="form-range cursor-pointer transition w-full rounded-full appearance-none"
             focus="outline-none ring-0"
           />
@@ -63,7 +64,7 @@ export default function Counter() {
         </row>
         <row gap="4">
           <button
-            btn="gray"
+            btn="dark"
             min-w="16"
             disabled={audio.state == AudioState.ERROR}
             onClick={() => skip(-15)}
@@ -71,14 +72,14 @@ export default function Counter() {
             {"-15s"}
           </button>
           <button
-            btn="gray"
+            btn="dark"
             disabled={audio.state == AudioState.ERROR}
             onClick={() => toggleSpeed()}
           >
             {speeds[speed()] + "x"}
           </button>
           <button
-            btn="gray"
+            btn="dark"
             min-w="16"
             disabled={audio.state == AudioState.ERROR}
             onClick={() => skip(15)}
