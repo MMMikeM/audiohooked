@@ -43,7 +43,6 @@ export default function Counter() {
           <button btn="black">black</button>
           <button btn="primary">primary</button>
           <button btn="red">error</button>
-          <button btn="ass">Should TS Error</button>
           <button disabled>disabled</button>
         </row>
         <button
